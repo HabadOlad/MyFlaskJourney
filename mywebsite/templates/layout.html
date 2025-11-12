@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="preload"
+      href="/mywebsite/static/css/assets/font/Adesso-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link href="/static/css/firstSiteStyling.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="nav-wrapper">
+      <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          &#9776;
+        </a>
+        <a class="link-home" href="/">HOME</a>
+        <a class="link-portfolio" href="/portfolio">PORTFOLIO</a>
+        <a class="link-projects" href="/projects">PROJECTS</a>
+        <a class="link-blog" href="/blog">BLOG</a>
+        <a class="link-cv" href="/cv">CV</a>
+        <a class="link-contact" href="/contactpage" target="_blank">CONTACT</a>
+
+        <main></main>
+      </div>
+    </div>
+    {% block mainBlock %} {% endblock %}
+    <footer id="footer"></footer>
+  </body>
+</html>
