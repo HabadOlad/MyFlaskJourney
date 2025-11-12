@@ -25,4 +25,4 @@ def cvpage():
 
 @app.route("/contact") #THis will send them to the first thing, backslash is a default which normally sends people to the index
 def contactpage():
-    return render_template("contact.html")  #this will send them to the index page
+    return render_template("contactpage.html")  #this will send them to the index page
