@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "Adesso"; /* Use the core family name */
+  font-weight: 700; /* Map this file to the 'bold' weight */
+  font-style: normal;
+  src: url("fonts/font (1)/Adesso-Bold.woff2") format("woff2"),
+    url("fonts/font (1)/Adesso-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Adesso";
+}
+
+body {
+  background-color: #efdba8;
+  /* Use only font-family and include a generic fallback */
+  font-family: "Adesso";
+  /* Using a single padding value for consistency across the entire page */
+  padding: 7.5px;
+  margin: 0;
+  text-align: left; /* All text-based elements inherit left alignment */
+  color: black;
+}
+
+/* --- Home Page Styles --- */
+.home-page {
+  background-color: #efdba8; /* peachish */
+}
+
+/* --- Portfolio Page Styles --- */
+.portfolio-page {
+  background-color: #2596be; /* blue */
+}
+
+/* --- Projects Page Styles --- */
+.projects-page {
+  background-color: #e04b29; /* peach pink */
+}
+
+/* --- Blog Page Styles --- */
+.blog-page {
+  background-color: #fdba9d; /* strong red*/
+}
+
+/* --- CV Page Styles --- */
+.cv-page {
+  background-color: #febb0b; /* gold yellow */
+}
+
+/* --- Contact Page Styles --- */
+.contact-page {
+  background-color: #cf8641; /* dark orange */
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.topnav {
+  /* Centers the content (the links) horizontally */
+
+  justify-content: center;
+  /* Makes sure the links stay in a row */
+  align-items: center;
+
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  margin: 20px auto;
+
+  /* Remove any default margin/padding from the container */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Recommended for nav bars */
+  display: inline-block;
+}
+
+.topnav a {
+  text-decoration: none;
+  color: black; /* Default text color */
+  padding: 10px 15px;
+  display: block;
+  background-color: transparent;
+  /* Smooth transition for the colorful hover effect */
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 6px;
+  float: left;
+}
+
+.nav-wrapper {
+  /* Ensures the container spans the full width of the parent (e.g., the body) */
+  width: 100%;
+  /* Centers the inline-flex content (the .topnav box) horizontally */
+  text-align: center;
+}
+
+/* HOME -  */
+.link-home:hover {
+  background-color: #efdba8; /* peachish */
+  color: white;
+}
+
+/* PORTFOLIO -  */
+.link-portfolio:hover {
+  background-color: #2596be; /* darkish blue */
+  color: white;
+}
+
+/* PROJECTS */
+.link-projects:hover {
+  background-color: #e04b29; /* strong red */
+  color: white;
+}
+
+/* BLOG  */
+.link-blog:hover {
+  background-color: #fdba9d; /* peach */
+  color: white;
+}
+
+/* CV  */
+.link-cv:hover {
+  background-color: #febb0b; /* gold */
+  color: white;
+}
+
+/* CONTACT  */
+.link-contact:hover {
+  background-color: #cf8641; /* funky brown */
+  color: white;
+}
+
+.tooltip-trigger {
+  position: relative;
+  color: #efa8bc;
+  cursor: pointer; /* Use pointer for the click action */
+}
+
+/* 2. Style and hide the photo by default */
+.tooltip-photo {
+  /* Hides the image by default (will be overridden by :hover or .show-photo) */
+  display: none;
+
+  /* Positioning and Box Styling */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: auto;
+  border: 3px solid black;
+  border-radius: 8px;
+  z-index: 10;
+  transition: opacity 0.3s; /* Smooth transition for click/hover */
+}
+
+/* 3. **CSS HOVER ACTION** (Photo appears when hovered) */
+.tooltip-trigger:hover .tooltip-photo {
+  display: block; /* Overrides the 'display: none' above */
+}
+
+/* 4. **JAVASCRIPT CLICK ACTION** (Photo stays visible when this class is active) */
+.tooltip-trigger.show-photo .tooltip-photo {
+  display: block !important; /* Forces visibility on click, overriding the hover/default */
+}
+
+/* Base Style for the Link */
+.h1-link {
+  /* Inherit the size from H1 but remove default link styles */
+  text-decoration: none; /* Removes the underline */
+  color: #319177; /* Sets the default color (e.g., pink or peach) */
+  cursor: pointer; /* Ensures the mouse cursor shows it's clickable */
+  font-weight: bold;
+  /* Optional: Smooth transition for color change */
+  transition: color 0.2s ease-in-out;
+}
+
+/* Color Change on HOVER */
+.h1-link:hover {
+  color: orange; /* Color changes to orange when the mouse is over it */
+}
+
+/* Color Change when CLICKED (i.e., when the button is actively pressed down) */
+.h1-link:active {
+  color: red; /* Color changes to red while the link is being pressed */
+}
+
+.h2-link {
+  /* Inherit the size from H1 but remove default link styles */
+  text-decoration: none; /* Removes the underline */
+  color: #cf8641; /* Sets the default color */
+  cursor: pointer; /* Ensures the mouse cursor shows it's clickable */
+  font-weight: bold;
+  /* Optional: Smooth transition for color change */
+  transition: color 0.2s ease-in-out;
+}
+
+/* Color Change on HOVER */
+.h2-link:hover {
+  color: #e0efa8; /* Color changes to orange when the mouse is over it */
+}
+
+/* Color Change when CLICKED (i.e., when the button is actively pressed down) */
+.h2-link:active {
+  color: red; /* Color changes to red while the link is being pressed */
+}
+
+.h3-link {
+  /* Inherit the size from H1 but remove default link styles */
+  text-decoration: none; /* Removes the underline */
+  color: #00ff00; /* Sets the default color (e.g., pink or peach) */
+  cursor: pointer; /* Ensures the mouse cursor shows it's clickable */
+  font-weight: bold;
+  /* Optional: Smooth transition for color change */
+  transition: color 0.2s ease-in-out;
+}
+
+/* Color Change on HOVER */
+.h3-link:hover {
+  color: #afe8be; /* Color changes to orange when the mouse is over it */
+}
+
+/* Color Change when CLICKED (i.e., when the button is actively pressed down) */
+.h3-link:active {
+  color: #ff0038; /* Color changes to red while the link is being pressed */
+}
+
+/* Keep all your existing Desktop/Default CSS here */
+
+/* --- Start Mobile-Specific Hamburger CSS --- */
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  /* Container switches to full-width block to hold stacked links */
+  .topnav {
+    width: 100%;
+    display: block;
+    border: none;
+    border-radius: 0;
+  }
+
+  /* Hide all links except the icon link */
+  .topnav a:not(.icon) {
+    display: none;
+    float: none;
+  }
+
+  /* Show and position the hamburger icon in the top right */
+  .topnav a.icon {
+    float: right;
+    display: block; /* Overrides the desktop 'display: none' */
+  }
+
+  /* **RESPONSIVE STATE** (When myFunction() adds the class) */
+  .topnav.responsive a {
+    float: none; /* Stacks the links */
+    display: block; /* Makes them full width */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Ensure the icon keeps its right-float position when menu is open */
+  .topnav.responsive a.icon {
+    float: right;
+    border-bottom: none;
+  }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #6e3fd1;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #635147;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #cf8641;
+  padding: 20px;
+}
