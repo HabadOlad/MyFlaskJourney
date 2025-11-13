@@ -1,9 +1,10 @@
 @font-face {
-  font-family: "Adesso"; /* Use the core family name */
-  font-weight: 700; /* Map this file to the 'bold' weight */
+  font-family: "Adesso";
+  font-weight: 700;
   font-style: normal;
-  src: url("fonts/font (1)/Adesso-Bold.woff2") format("woff2"),
-    url("fonts/font (1)/Adesso-Bold.woff") format("woff");
+  /* CHANGE THIS LINE: Use the path relative to the CSS file */
+  src: url("assets/font/Adesso-Bold.woff2") format("woff2"),
+    url("assets/font/Adesso-Bold.woff") format("woff");
   font-display: swap;
 }
 
