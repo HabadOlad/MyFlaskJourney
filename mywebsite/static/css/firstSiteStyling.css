@@ -4,8 +4,8 @@
   font-weight: 700;
   font-style: normal;
   /* CORRECTED: ADD /static/ to the start */
-  src: url("/static/assets/font/Adesso-Bold.woff2") format("woff2"),
-    url("/static/assets/font/Adesso-Bold.woff") format("woff");
+  src: url("assets/font/Adesso-Bold.woff2") format("woff2"),
+    url("assets/font/Adesso-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -15,8 +15,8 @@
   font-weight: 300;
   font-style: normal;
   /* CORRECTED: ADD /static/ to the start */
-  src: url("/static/assets/font/AdessoW00-Regular.woff2") format("woff2"),
-    url("/static/assets/font/AdessoW00-Regular.woff") format("woff");
+  src: url("assets/font/AdessoW00-Regular.woff2") format("woff2"),
+    url("assets/font/AdessoW00-Regular.woff") format("woff");
   font-display: swap;
 }
 
