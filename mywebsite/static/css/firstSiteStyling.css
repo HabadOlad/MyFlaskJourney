@@ -1,10 +1,22 @@
+/* 1. BOLD VARIANT */
 @font-face {
   font-family: "Adesso";
   font-weight: 700;
   font-style: normal;
-  /* CHANGE THIS LINE: Use the path relative to the CSS file */
-  src: url("assets/font/Adesso-Bold.woff2") format("woff2"),
-    url("assets/font/Adesso-Bold.woff") format("woff");
+  /* CORRECTED: ADD /static/ to the start */
+  src: url("/static/assets/font/Adesso-Bold.woff2") format("woff2"),
+    url("/static/assets/font/Adesso-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+/* 2. THIN/REGULAR VARIANT */
+@font-face {
+  font-family: "Adesso";
+  font-weight: 300;
+  font-style: normal;
+  /* CORRECTED: ADD /static/ to the start */
+  src: url("/static/assets/font/AdessoW00-Regular.woff2") format("woff2"),
+    url("/static/assets/font/AdessoW00-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -67,7 +79,7 @@ h1 {
   justify-content: center;
   /* Makes sure the links stay in a row */
   align-items: center;
-
+  font-weight: 300;
   font-size: 30px;
   border: 2px solid black;
   border-radius: 10px;
