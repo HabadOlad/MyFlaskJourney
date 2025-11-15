@@ -1,4 +1,4 @@
-from flask import flask, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__) #this program is a flask application, tells flask that this is the main application program
 
@@ -23,6 +23,12 @@ def blogpage():
 def cvpage():
     return render_template("cv.html")  #this will send them to the index page
 
-@app.route("/contact") #THis will send them to the first thing, backslash is a default which normally sends people to the index
+@app.route("/contactpage") #THis will send them to the first thing, backslash is a default which normally sends people to the index
 def contactpage():
     return render_template("contactpage.html")  #this will send them to the index page
+
+
+@app.route("/zork") #THis will send them to the first thing, backslash is a default which normally sends people to the index
+def zorkpage():
+    return render_template("zork.html")  #this will send them to the index page
+
