@@ -32,3 +32,6 @@ def contactpage():
 def zorkpage():
     return render_template("zork.html")  #this will send them to the index page
 
+#This is should allow me to update python - Automatic Restarts (Reloader): When you save a change to a Python file (.py), the server automatically detects the change and reloads itself. This is what stops you from having to constantly stop and start Flask manually.
+if __name__ == "__main__":
+    app.run(debug=True)
