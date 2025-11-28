@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block mainBlock %}
+<div class="blog-page-content">
+  <h1>Select Post to Edit</h1>
+  <p>Choose a post from the list below to begin editing.</p>
+  <hr />
+
+  {% for post in posts %}
+  <article class="post-item-listing">
+    <h2>
+      <a href="{{ url_for('edit_post', post_id=post.id) }}">{{ post.title }}</a>
+    </h2>
+    <small>Published: {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+    <p>{{ post.content[:100] }}...</p>
+
+    <a href="{{ url_for('edit_post', post_id=post.id) }}" class="btn-edit"
+      >✏️ Edit</a
+    >
+  </article>
+  <hr />
+  {% endfor %} {% if not posts %}
+  <p>
+    No posts found. Why not
+    <a href="{{ url_for('new_post') }}">create a new one</a>?
+  </p>
+  {% endif %}
+</div>
+{% endblock %}
