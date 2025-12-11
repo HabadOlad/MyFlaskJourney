@@ -1,5 +1,37 @@
 {% extends "layout.html" %} {% block mainBlock %}
 <body class="projects-page">
+  <div class="grid-container">
+      <div class="project-card">
+          <h3>Blogpost manager module</h3>
+          <a href="https://github.com/HabadOlad/Hab-blog" target="_blank">
+          <img src="{{ url_for('static', filename='css/assets/photos/blogimage.png') }}" alt="Blogpost manager module">
+          </a>
+          <p>A rapid way to add a blogging system to your website! </p>
+      </div>
+  
+      <div class="project-card">
+          <h3>StopSnoringML</h3>
+          <img src=" " alt="StopSnoringML">
+          <p>An arduino device that records my snoring at night, and then we do some data science on it!          </p>
+      </div>
+    
+      <div class="project-card">
+        <h3>ZORK!</h3>
+        <a href="https://habadolad.com/zork.html" target="_blank">
+        <img src="{{ url_for('static', filename='css/assets/photos/zorkimage.png') }}" alt="Zork!">
+        </a>
+        <p>My interactive fiction game!</p>
+    </div>
+    
+    <div class="project-card">
+      <h3>Quote generator!</h3>
+      <a href="https://habadolad.com/QuoteGenerator.html"  target="_blank">
+      <img src="{{ url_for('static', filename='css/assets/photos/quoteimage.png') }}" alt="Zork!">
+      </a>
+      <p>A cool little quote generator for when you're going through tough times!!</p>
+  </div>
+  
+    
   <footer id="footer"></footer>
   <script src="/static/js/firstWebsiteJS.js" type="text/javascript"></script>
   {% endblock %}

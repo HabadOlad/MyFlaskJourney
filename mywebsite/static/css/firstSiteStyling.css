@@ -322,3 +322,35 @@ input[type="submit"]:hover {
   background-color: #cf8641;
   padding: 20px;
 }
+
+.grid-container {
+  /* 1. Enable CSS Grid layout */
+  display: grid;
+
+  /* 2. Define the columns: three equal-width tracks */
+  /* 'fr' is the fractional unit, making each column take up 1/3 of the available space. */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* 3. Add space between the rows and columns */
+  gap: 20px; /* Adjust this value for desired spacing */
+
+  /* 4. Optional: Center the grid itself on the page */
+  max-width: 1200px; /* Set a max width for the whole container */
+  margin: 0 auto; /* Center the container */
+}
+
+.project-card img {
+  /* 1. Sets the maximum width of the image to the width of its parent container. */
+  /* This ensures it never spills outside the card, even if the image is huge. */
+  max-width: 100%;
+
+  /* 2. Automatically adjusts the height to maintain the image's aspect ratio. */
+  /* This prevents the image from looking stretched or squashed. */
+  height: auto;
+
+  /* Optional: Sets a reasonable default size for larger screens (laptops/desktops) */
+  width: 300px; /* Adjust this fixed width as needed for your laptop view */
+
+  /* Optional: Makes the image a perfect square/circle if desired */
+  /* aspect-ratio: 1 / 1; */
+}
