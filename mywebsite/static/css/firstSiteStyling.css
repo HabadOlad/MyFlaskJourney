@@ -350,29 +350,54 @@ input[type="submit"]:hover {
   margin: 0 auto; /* Center the container */
 }
 
+@keyframes background-cycle {
+  0% {
+    background-color: #febb0b; /* Tomato */
+  }
+  25% {
+    background-color: #efdba8; /* Medium Sea Green */
+  }
+  50% {
+    background-color: #2596be; /* Royal Blue */
+  }
+  75% {
+    background-color: #fdba9d; /* Gold */
+  }
+  100% {
+    background-color: #cf8641; /* Back to Tomato */
+  }
+}
+
 .project-card {
-  /* Set a defined max-width if you haven't already. 
-     This is crucial for containment. */
-  max-width: 300px; /* Example width - use your desired size */
+  max-width: 300px;
   width: 100%;
-  /* Optional: Add padding to keep content slightly away from the card's edge */
   padding: 10px;
+
+  /* Applying the rounded corners */
+  border-radius: 50px;
+
+  /* FIX 1: Use 'transparent' instead of 'none' */
+  background-color: transparent;
+
+  /* Correct syntax for no border */
+  border: none;
+
+  /* FIX 2: Set transition to none so it doesn't fight the animation */
+  transition: none;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  animation: background-cycle 4s linear infinite;
 }
 
 .project-card img {
-  /* 1. Sets the maximum width of the image to the width of its parent container. */
-  /* This ensures it never spills outside the card, even if the image is huge. */
   max-width: 100%;
-
-  /* 2. Automatically adjusts the height to maintain the image's aspect ratio. */
-  /* This prevents the image from looking stretched or squashed. */
   height: auto;
+  border-radius: 50px;
 
-  /* Optional: Sets a reasonable default size for larger screens (laptops/desktops) */
-  width: 300px; /* Adjust this fixed width as needed for your laptop view */
-
-  /* Optional: Makes the image a perfect square/circle if desired */
-  /* aspect-ratio: 1 / 1; */
+  /* Ensure the image takes up the full width minus any padding on the card itself */
+  display: block;
 }
 /* 1. Remove the outline/border from the parent
      and allow its children to wrap.
@@ -407,4 +432,32 @@ input[type="submit"]:hover {
 
   /* Treat the span as a proper block for margin/padding */
   display: inline-block;
+}
+
+.floated-profile-img {
+  float: left; /* This moves the image to the left, allowing text to wrap around it */
+  width: 200px; /* Set a specific, small width */
+  height: auto;
+  margin-right: 25px; /* Adds space between the image and the text */
+  margin-bottom: 15px; /* Adds space below the image */
+
+  /* Optional: Aesthetic styling */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* IMPORTANT: Clear the float below the text/image section */
+.cv-heading {
+  /* Add the specific styles you want here, e.g.: */
+
+  font-size: 2.2em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  clear: left; /* Keep this if you used the `float` method earlier */
+}
+
+/* Optional: You can style the paragraph text if needed */
+.about-me-text {
+  /* Ensure paragraph has some top padding if needed to align with image */
+  padding-top: 5px;
 }
